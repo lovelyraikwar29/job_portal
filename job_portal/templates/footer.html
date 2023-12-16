@@ -1,0 +1,185 @@
+{% load static %}
+
+
+<head>
+	<script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-rREO2P2Oa6RjQ2r8Wd5oW8lD3Uq6sZLM2KZl5ObVWmI1MRVgW5Fx9Vjgx6Aq1npi" crossorigin="anonymous">
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+	background-color: #151515;
+	padding: 80px 0;
+}
+
+.container {
+	max-width: 1170px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul {
+	list-style: none;
+}
+
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
+}
+
+.footer-col h4 {
+	font-size: 18px;
+	color: #FFF;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #E91E63;
+	width: 50px;
+	height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+	color: #DDD;
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+	color: #FFF;
+	padding-left: 7px;
+}
+
+.footer-col .social-links a {
+	color: #FFF;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	line-height: 40px;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+	color: #151515;
+	background-color: #FFF;
+}
+
+@media(max-width: 767px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@media(max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
+}
+    </style>
+</head>
+
+<body>
+	<footer class="footer">
+		<div class="container row">
+            <div class="footer-col">
+                <h4>Contact Information</h4>
+                <ul style="list-style: none; padding: 0;">
+            
+                    <li style="margin-bottom: 10px;">
+                        <i class="fas fa-map-marker-alt" style="display: inline-block; margin-right: 5px; color:#be3144;"></i>
+                        <a href="https://www.google.co.in/maps/place/Janakpuri+District+Center,+Janakpuri,+Delhi/@28.6290125,77.078001,17z/data=!3m1!4b1!4m6!3m5!1s0x390d04bf6ac2495d:0xfff07fc03531f009!8m2!3d28.6295538!4d77.0801899!16s%2Fg%2F1pv1rvy4f?entry=ttu" style="display: inline-block; vertical-align: middle;">New Delhi, C Block</a>
+                    </li>
+            
+                    <li style="margin-bottom: 10px;">
+                        <i class="fas fa-phone" style="display: inline-block; margin-right: 5px; color:#be3144;"></i>
+                        <a href="#" style="display: inline-block; vertical-align: middle;">+91 8178554602</a>
+                    </li>
+            
+                    <li>
+                        <i class="far fa-envelope" style="display: inline-block; margin-right: 5px; color:#be3144;"></i>
+                        <a href="mailto:raikwarlovely29@gmail.com" style="display: inline-block; vertical-align: middle;">raikwarlovely29@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+				<h4>get help</h4>
+				<ul>
+					<li><a href="#">An placement website is a website that deals
+                        specially with employment or careers.Many
+                         employment websites are designed to allow
+                         employers to post job requirements for a
+                         position to be filled and are commonly known as 
+                         job board.</a></li>
+				</ul>
+			</div>
+
+
+
+			<div class="footer-col">
+				<h4>News Letter</h4>
+				<ul>
+					<li><a href="#">If you want any extra info then droup your Email Here </a></li>
+				</ul>
+                <form method="post" class="form-inline">
+                    {% csrf_token %}
+                    <input type="email id" placeholder= "Drop Email" required class="form-conntrol">
+                    <button class="btn btn-primary";>Send</button>
+                </form>
+			</div>
+			
+			<div class="footer-col">
+				<h4>follow us</h4>
+				<div class="social-links">
+					<a href="https://github.com/lovelyraikwar29/"><i class="fa-brands fa-github"></i></a>
+					<a href="https://twitter.com/home?utm_source=liteAPK&utm_medium=shortcut&first_run=false"><i class="fa-brands fa-x-twitter"></i></a>
+					<a href="https://www.instagram.com/_lovely.raikwar_"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/in/lovelyraikwar"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>

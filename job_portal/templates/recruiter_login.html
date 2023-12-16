@@ -1,0 +1,26 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navbar.html' %}
+
+<marquee style= "font-family: 'monotype Corvisa';font-size: 25px; color:darkcolor; background-color:#C9BB8E;font-weight:bold;margin-top:1% ;">
+    Recruiter Login
+</marquee> 
+
+<hr>
+<form class="container mt-5 text-center" method="post">
+    {% csrf_token %}
+    
+    <label>Email Id</label>
+    <input type="text" class="form-control" name="uname" placeholder="Enter Email Id" >
+
+    <label>Password</label>
+    <input type="password" class="form-control" name="pwd" placeholder="Enter Password" style="margin-bottom: 10px;">
+
+    <button type="submit" class="btn btn-primary" style="width: 20%;">Submit</button>
+
+    <hr>
+</form>
+
+{% endblock %}

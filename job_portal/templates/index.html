@@ -1,0 +1,67 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navbar.html' %}
+
+<style>
+.content{
+    text-align: center;
+    position:absolute;
+    bottom:0;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    height:40px;
+    width:91%;
+}
+</style>
+
+ <div class="container">
+    <img src="{% static 'images/apply.jpg' %}" style="height: 550px 00px; width: 100%; margin-bottom: 20px;">
+</div>
+
+<div class="container" style="background-color: white; height: 300px; margin-top: 3%;">
+    <h1>-----------------|OUR PLACED STUDENTS|----------------</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/USER.jpg'%}" style="height: 200px; width: 200px; margin: 5% 0 20px; border-radius: 100%">
+            <div class="content">
+                <b>Google</b><br>
+                <b>40 LPA</b>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/USER2.jpg'%}" style="height: 200px; width: 200px; margin: 5% 0 20px; border-radius: 100%">
+            <div class="content">
+                <b>Microsoft</b><br>
+                <b>30 LPA</b>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/USER 3.jpg'%}" style="height: 200px; width: 200px; margin: 5% 0 20px; border-radius: 100%">
+            <div class="content">
+                <b>Facebook</b><br>
+                <b>20 LPA</b>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/USER 4.jpg'%}" style="height: 200px; width: 200px; margin: 5% 0 20px; border-radius: 100%">
+            <div class="content">
+                <b>Amazon</b><br>
+                <b>10 LPA</b>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<hr>
+<hr>
+
+{% include 'footer.html' %}
+
+
+{% endblock %}
